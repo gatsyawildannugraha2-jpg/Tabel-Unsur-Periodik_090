@@ -1,0 +1,105 @@
+# Tabel-Unsur-Periodik_090
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Periodic Table</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-decorations">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <div class="app-container">
+        <!-- Main Periodic Table View -->
+        <main class="table-area">
+            <header>
+                <h1>Tabel Periodik Unsur</h1>
+            </header>
+            
+            <div id="periodic-table" class="periodic-table">
+                <!-- Elements will be injected here via JavaScript -->
+            </div>
+
+            <!-- Hover Tooltip -->
+            <div id="tooltip" class="element-tooltip hidden">
+                <div class="tooltip-header">
+                    <span class="tooltip-number" id="tt-number"></span>
+                    <span class="tooltip-mass" id="tt-mass"></span>
+                </div>
+                <div class="tooltip-symbol" id="tt-symbol"></div>
+                <div class="tooltip-name" id="tt-name"></div>
+            </div>
+        </main>
+
+        <!-- Right Side Information Panel -->
+        <aside class="info-panel" id="info-panel">
+            <div class="info-content hidden" id="info-content">
+                <h2 class="info-title">
+                    <span id="panel-name">Actinium</span> 
+                    (<span id="panel-symbol">Ac</span>)<sup id="panel-number" class="superscript">89</sup>
+                </h2>
+                <div class="info-category">
+                    <span class="category-dot" id="panel-category-dot"></span>
+                    <span id="panel-category-text">Actinide</span>
+                </div>
+
+                <div class="info-model">
+                    <!-- Bohr model animation container -->
+                    <div class="bohr-model" id="bohr-model">
+                        <div class="nucleus" id="nucleus">
+                            <span id="nucleus-symbol">Ac</span>
+                        </div>
+                        <div class="orbits" id="orbits">
+                            <!-- Orbit rings and electrons will be injected here via JS -->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info-details">
+                    <h3 class="detail-subtitle">Representasi Model Bohr</h3>
+                    <p id="panel-description" class="detail-description">
+                        Aktinium bersinar dalam gelap dengan cahaya biru pucat, yang berasal dari udara di sekitarnya yang terionisasi oleh partikel berenergi yang dipancarkan.
+                    </p>
+                    
+                    <div class="detail-row">
+                        <span class="detail-label">Simbol:</span>
+                        <span class="detail-value" id="panel-detail-symbol">Ac</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Massa atom:</span>
+                        <span class="detail-value"><span id="panel-detail-mass">227</span> u</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Massa jenis:</span>
+                        <span class="detail-value" id="panel-density">10 g/cm³</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Titik lebur:</span>
+                        <span class="detail-value" id="panel-melt">1324 K</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Titik didih:</span>
+                        <span class="detail-value" id="panel-boil">3471 K</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Konfigurasi Elektron:</span>
+                        <span class="detail-value" id="panel-configuration">[Rn] 6d1 7s2</span>
+                    </div>
+                </div>
+            </div>
+            <div class="info-placeholder" id="info-placeholder">
+                <p>Pilih salah satu unsur untuk melihat detailnya</p>
+            </div>
+        </aside>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+Tabel Unsur Periodik Digital
